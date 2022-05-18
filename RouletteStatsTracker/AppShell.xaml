@@ -6,9 +6,16 @@
     xmlns:local="clr-namespace:RouletteStatsTracker"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
 
+        <Tab Title="Input">
+            <ShellContent ContentTemplate="{DataTemplate local:InputPage}"/>
+        </Tab>
+        <Tab Title="Flow">
+            <ShellContent  ContentTemplate="{DataTemplate local:FlowPage}" />
+        </Tab>
+        <Tab Title="Stats">
+            <ShellContent ContentTemplate="{DataTemplate local:StatsPage}" />
+        </Tab>
+    </TabBar>
 </Shell>

@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RouletteStatsTracker.MainPage">
-			 
+             x:Class="RouletteStatsTracker.InputPage"
+             Title="Input">
     <ScrollView>
         <VerticalStackLayout 
             Spacing="25" 
@@ -14,13 +14,13 @@
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-                
+
             <Label 
                 Text="Hello, World!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
-            
+
             <Label 
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
@@ -35,7 +35,12 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Button
+                x:Name="SettingsBtn"
+                Text="Go To Settings"
+                Clicked="SettingsBtn_Clicked"
+                HorizontalOptions="Center"/>
+
         </VerticalStackLayout>
     </ScrollView>
- 
 </ContentPage>
