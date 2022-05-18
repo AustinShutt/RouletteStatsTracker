@@ -1,4 +1,6 @@
-﻿namespace RouletteStatsTracker;
+﻿using RouletteStatsTracker.Pages;
+
+namespace RouletteStatsTracker;
 
 public partial class AppShell : Shell
 {

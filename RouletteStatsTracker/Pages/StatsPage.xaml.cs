@@ -1,4 +1,4 @@
-namespace RouletteStatsTracker;
+namespace RouletteStatsTracker.Pages;
 
 public partial class StatsPage : ContentPage
 {
