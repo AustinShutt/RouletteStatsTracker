@@ -7,15 +7,14 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-
         <Tab Title="Input">
-            <ShellContent ContentTemplate="{DataTemplate local:InputPage}"/>
+            <ShellContent  ContentTemplate="{DataTemplate local:InputPage}"/>
         </Tab>
         <Tab Title="Flow">
             <ShellContent  ContentTemplate="{DataTemplate local:FlowPage}" />
         </Tab>
         <Tab Title="Stats">
-            <ShellContent ContentTemplate="{DataTemplate local:StatsPage}" />
+            <ShellContent  ContentTemplate="{DataTemplate local:StatsPage}" />
         </Tab>
     </TabBar>
 </Shell>

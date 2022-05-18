@@ -49,18 +49,38 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="FlowPage.xaml">
+	  <MauiXaml Update="Views\FlowView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="InputPage.xaml">
+	  <MauiXaml Update="Views\InputView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="SettingsPage.xaml">
+	  <MauiXaml Update="Views\SettingsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="StatsPage.xaml">
+	  <MauiXaml Update="Views\StatsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	  <Folder Include="ViewModels\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\FlowView.xaml.cs">
+	    <DependentUpon>FlowView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\InputView.xaml.cs">
+	    <DependentUpon>InputView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SettingsView.xaml.cs">
+	    <DependentUpon>SettingsView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\StatsView.xaml.cs">
+	    <DependentUpon>StatsView.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>
