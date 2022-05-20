@@ -4,6 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!-- Custom Colors from Miro Mockup-->
+    <Color x:Key="rRed">      #D92332</Color>
+    <Color x:Key="rDarkBlue"> #2C3E50</Color>
+    <Color x:Key="rGreen">    #27AE60</Color>
+    <Color x:Key="rWhite">    #ECF0F1</Color>
+    <Color x:Key="rGray">     #BDC3C7</Color>
+    <Color x:Key="rLightBlue">#2D9BF0</Color>
+
+    <!-- Template Project Colors -->
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="Light">#DFD8F7</Color>
     <Color x:Key="Dark">#2B0B98</Color>
