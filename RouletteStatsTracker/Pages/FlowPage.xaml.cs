@@ -4,10 +4,8 @@ using RouletteStatsTracker.ViewModels;
 
 public partial class FlowPage : ContentPage
 {
-	FlowViewModel flowViewModel;
-	public FlowPage(FlowViewModel flowViewModel)
+	public FlowPage()
     {
         InitializeComponent();
-        BindingContext = this.flowViewModel = flowViewModel;
     }
 }

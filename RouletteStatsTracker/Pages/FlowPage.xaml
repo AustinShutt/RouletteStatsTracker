@@ -2,8 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RouletteStatsTracker.Pages.FlowPage"
+             xmlns:ViewModels ="clr-namespace:RouletteStatsTracker.ViewModels"
              Title="Flow">
-    <StackLayout VerticalOptions="Center">
+
+    <ContentPage.BindingContext>
+        <ViewModels:FlowViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout VerticalOptions="Center" >
         <Label Text="Welcome to .NET MAUI!"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />

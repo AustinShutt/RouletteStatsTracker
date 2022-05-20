@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using RouletteStatsTracker.Helpers;
 using RouletteStatsTracker.Models;
 
 namespace RouletteStatsTracker.ViewModels
@@ -13,9 +13,9 @@ namespace RouletteStatsTracker.ViewModels
     public class EuropeanStatsViewModel
     {
         DataStore dataStore;
-        public EuropeanStatsViewModel(DataStore dataStore)
+        public EuropeanStatsViewModel()
         {
-            this.dataStore = dataStore;
+            dataStore = ServiceHelper.GetService<DataStore>();
         }
     }
 }
