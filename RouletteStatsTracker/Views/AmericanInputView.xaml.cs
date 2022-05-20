@@ -1,9 +1,13 @@
 namespace RouletteStatsTracker.Views;
 
+using RouletteStatsTracker.ViewModels;
 public partial class AmericanInputView : ContentView
 {
-	public AmericanInputView()
-	{
-		InitializeComponent();
-	}
+	AmericanInputViewModel americanInputViewModel;
+
+	public AmericanInputView(AmericanInputViewModel americanInputViewModel)
+    {
+        InitializeComponent();
+        BindingContext = this.americanInputViewModel = americanInputViewModel;
+    }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RouletteStatsTracker.Models
 {
-    class Settings
+    public class Settings
     {
         public enum Theme { LIGHT, DARK};
         public enum GameType { AMERICAN, EUROPEAN}

@@ -10,10 +10,10 @@ namespace RouletteStatsTracker.ViewModels
 {
     
 
-    internal class EuropeanStatsViewModel
+    public class EuropeanStatsViewModel
     {
         DataStore dataStore;
-        EuropeanStatsViewModel(DataStore dataStore)
+        public EuropeanStatsViewModel(DataStore dataStore)
         {
             this.dataStore = dataStore;
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RouletteStatsTracker.Models
 {
-    class DataStore
+    public class DataStore
     {
         public bool American { get; set; }
         public bool European { get; set; }

@@ -8,10 +8,10 @@ using RouletteStatsTracker.Models;
 
 namespace RouletteStatsTracker.ViewModels
 {
-    internal class FlowViewModel
+    public class FlowViewModel
     {
         DataStore dataStore;
-        FlowViewModel(DataStore dataStore)
+        public FlowViewModel(DataStore dataStore)
         {
             this.dataStore = dataStore;
         }

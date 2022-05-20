@@ -1,9 +1,13 @@
 namespace RouletteStatsTracker.Pages;
 
+using RouletteStatsTracker.ViewModels;
+
 public partial class FlowPage : ContentPage
 {
-	public FlowPage()
-	{
-		InitializeComponent();
-	}
+	FlowViewModel flowViewModel;
+	public FlowPage(FlowViewModel flowViewModel)
+    {
+        InitializeComponent();
+        BindingContext = this.flowViewModel = flowViewModel;
+    }
 }

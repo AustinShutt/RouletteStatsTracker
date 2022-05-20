@@ -8,7 +8,7 @@ using RouletteStatsTracker.Models;
 
 namespace RouletteStatsTracker.ViewModels
 {
-    internal class AmericanStatsViewModel
+    public class AmericanStatsViewModel
     {
         DataStore dataStore;
         AmericanStatsViewModel(DataStore dataStore)
