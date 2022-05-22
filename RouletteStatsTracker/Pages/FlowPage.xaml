@@ -3,15 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RouletteStatsTracker.Pages.FlowPage"
              xmlns:ViewModels ="clr-namespace:RouletteStatsTracker.ViewModels"
-             Title="Flow">
+             xmlns:controls ="clr-namespace:RouletteStatsTracker.Controls"
+             Title="Flow"
+             >
 
     <ContentPage.BindingContext>
         <ViewModels:FlowViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout VerticalOptions="Center" >
-        <Label Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+    <ContentPage.Resources>
+        <DataTemplate x:Key="GreenTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Red}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="0"/>
+                <Label Text="{Binding Black}" TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="1"/>
+                <Label Text="{Binding Even}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="2"/>
+                <Label Text="{Binding Odd}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="3"/>
+                <Label Text="{Binding High}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="4"/>
+                <Label Text="{Binding Low}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="5"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="NormalTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Red}"   TextColor="{StaticResource rRed}"  HorizontalOptions="Center" Grid.Column="0"/>
+                <Label Text="{Binding Black}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="1"/>
+                <Label Text="{Binding Even}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2"/>
+                <Label Text="{Binding Odd}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3"/>
+                <Label Text="{Binding High}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="4"/>
+                <Label Text="{Binding Low}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="5"/>
+            </Grid>
+        </DataTemplate>
+        
+        <controls:FlowTemplateSelector x:Key="TemplateSelector" 
+                                                GreenRow  ="{StaticResource GreenTemplate}  " 
+                                                OtherRow  ="{StaticResource NormalTemplate}" />
+    </ContentPage.Resources>
+    
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <CollectionView ItemsSource="{Binding dataStore.FlowObjects}" ItemTemplate="{StaticResource TemplateSelector}" />
     </StackLayout>
 </ContentPage>

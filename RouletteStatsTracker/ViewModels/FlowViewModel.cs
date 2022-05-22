@@ -11,13 +11,13 @@ namespace RouletteStatsTracker.ViewModels
 {
     public class FlowViewModel
     {
-        DataStore dataStore;
+        public DataStore dataStore { get; set; }
         public ObservableCollection<FlowObject> FlowObjects { get; set; }
         public FlowViewModel()
         {
             dataStore = ServiceHelper.GetService<DataStore>();
             
-            FlowObjects = new ObservableCollection<FlowObject>();
+            FlowObjects = ServiceHelper.GetService<DataStore>().FlowObjects;
         }
     }
 }
