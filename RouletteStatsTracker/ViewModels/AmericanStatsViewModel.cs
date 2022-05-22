@@ -10,8 +10,8 @@ namespace RouletteStatsTracker.ViewModels
 {
     public class AmericanStatsViewModel
     {
-        DataStore dataStore;
-        AmericanStatsViewModel()
+        public DataStore dataStore { get; set; }
+        public AmericanStatsViewModel()
         {
             dataStore = ServiceHelper.GetService<DataStore>();
         }
