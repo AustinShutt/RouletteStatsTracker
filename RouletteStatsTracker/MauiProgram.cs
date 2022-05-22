@@ -4,6 +4,7 @@ using RouletteStatsTracker.Models;
 using RouletteStatsTracker.Views;
 using RouletteStatsTracker.Pages;
 using RouletteStatsTracker.ViewModels;
+using RouletteStatsTracker.Helpers;
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
@@ -28,6 +29,7 @@ public static class MauiProgram
 		//Add Model Singletons
 		builder.Services.AddSingleton<DataStore>();
 		builder.Services.AddSingleton<Settings>();
+		builder.Services.AddSingleton<AmericanDataService>();
 
 		//Add ViewModel Singletons
 		builder.Services.AddSingleton<AmericanInputViewModel>();

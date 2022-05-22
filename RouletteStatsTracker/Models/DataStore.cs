@@ -24,14 +24,14 @@ namespace RouletteStatsTracker.Models
         public int Third1 { get; set; }
         public int Third2 { get; set; }
         public int Third3 { get; set; }
-
-        public int[] numberArray;
+        public int Total { get; set; }
+        public int[] NumberArray { get; set; }
         public ObservableCollection<FlowObject> FlowObjects {get; set; }
 
         public DataStore()
         {
             //0 , 1-36, 00
-            numberArray = new int[38]; 
+            NumberArray = new int[38];
             FlowObjects = new ObservableCollection<FlowObject>();
         }
     }

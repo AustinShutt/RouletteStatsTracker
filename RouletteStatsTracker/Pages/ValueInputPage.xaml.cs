@@ -14,6 +14,17 @@ public partial class ValueInputPage : ContentPage
         this.americanInputView = americanInputView;
         this.europeanInputView = europeanInputView;
 
+        SetToAmerican();
+    }
+
+    public void SetToAmerican()
+    {
+        baseLayout.Clear();
+        baseLayout.Add(americanInputView);
+    }
+
+    public void SetToEuropean()
+    {
         baseLayout.Clear();
         baseLayout.Add(europeanInputView);
     }
