@@ -2,15 +2,41 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
+             xmlns:drawable="clr-namespace:RouletteStatsTracker.Graphs"
+             xmlns:graph="clr-namespace:Microsoft.Maui.Graphics;assembly=Microsoft.Maui"
              x:Class="RouletteStatsTracker.Views.AmericanStatsView">
-    
+
     <ContentView.BindingContext>
         <ViewModels:EuropeanStatsViewModel/>
     </ContentView.BindingContext>
-    
-    <StackLayout>
-        <Label Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+
+    <ContentView.Resources>
+        <drawable:DonutChart x:Key="RedBlackChart" x:Name="redBlackDonut" x:DataType="graph:MauiDrawable">
+            <x:Arguments>
+                <x:String>Red</x:String>
+                <x:String>Black</x:String>
+            </x:Arguments>
+        </drawable:DonutChart>
+        <drawable:DonutChart x:Key="EvenOddChart" x:Name="evenOddDonut" x:DataType="graph:MauiDrawable">
+            <x:Arguments>
+                <x:String>Even</x:String>
+                <x:String>Odd</x:String>
+            </x:Arguments>
+        </drawable:DonutChart>
+        <drawable:DonutChart x:Key="HighLowChart" x:Name="highLowDonut" x:DataType="graph:MauiDrawable">
+            <x:Arguments>
+                <x:String>High</x:String>
+                <x:String>Low</x:String>
+            </x:Arguments>
+        </drawable:DonutChart>
+    </ContentView.Resources>
+
+    <StackLayout HorizontalOptions="Center">
+       
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <GraphicsView x:Name="RedBlackSurface" Drawable="{StaticResource RedBlackChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
+            <GraphicsView x:Name="EvenOddSurface"  Drawable="{StaticResource EvenOddChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
+            <GraphicsView x:Name="HighLowSurface"  Drawable="{StaticResource HighLowChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
+        </StackLayout>
     </StackLayout>
 </ContentView>

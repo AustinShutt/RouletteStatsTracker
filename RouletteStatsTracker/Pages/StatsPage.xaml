@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RouletteStatsTracker.Pages.StatsPage"
              Title="Statistics">
-    <StackLayout>
-        <Label Text="Welcome to .NET MAUI!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+    
+    
+    <StackLayout x:Name="baseLayout">
+    
     </StackLayout>
 </ContentPage>
