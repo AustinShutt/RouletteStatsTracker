@@ -19,7 +19,6 @@ namespace RouletteStatsTracker.Graphs
             SetValues(0, 0, 0);
         }
 
-
         public DonutChart(string titleLeft, string titleRight)
         {
             SetValues(0, 0, 0);
@@ -73,18 +72,18 @@ namespace RouletteStatsTracker.Graphs
 
                 canvas.StrokeColor = Color.FromArgb("2C3E50");
                 canvas.Translate(40, 40);
-                canvas.DrawArc(0, 0, 200 - 80, 200 - 80, 90, proportion, true, false);
+                canvas.DrawArc(0, 0, 200 - 80, 200 - 80, 90, proportion , true, false);
                 canvas.StrokeColor = Color.FromArgb("D92332");
                 canvas.DrawArc(0, 0, 200 - 80, 200 - 80, proportion, 90, true, false);
                 canvas.Translate(-40, -40);
             }
 
-            canvas.FontSize = 20;
+            canvas.FontSize = 24;
             canvas.FontColor = Colors.White;
-            canvas.DrawString(titleLeft, 50, 140, HorizontalAlignment.Center);
-            canvas.DrawString(titleRight, 150, 140, HorizontalAlignment.Center);
-            canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", 150, 70, HorizontalAlignment.Center);
-            canvas.DrawString((ratioLeft * 100).ToString("0.0") + "%", 50, 70, HorizontalAlignment.Center);
+            canvas.DrawString(titleLeft, 55, 140, HorizontalAlignment.Center);
+            canvas.DrawString(titleRight, 145, 140, HorizontalAlignment.Center);
+            canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", 145, 70, HorizontalAlignment.Center);
+            canvas.DrawString((ratioLeft * 100).ToString("0.0") + "%", 55, 70, HorizontalAlignment.Center);
             canvas.ResetState();
         }
     }

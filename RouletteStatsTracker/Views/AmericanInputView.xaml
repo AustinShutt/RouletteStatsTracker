@@ -34,6 +34,7 @@
         <Button Text="0"      Command="{Binding DataButtonCommand}"   CommandParameter="0" WidthRequest="100"/>
         <Button Text="1"      Command="{Binding DataButtonCommand}"   CommandParameter="1" WidthRequest="100"/>
         <Button Text="2"      Command="{Binding DataButtonCommand}"   CommandParameter="2" WidthRequest="100"/>
+        <Button Text="3"      Command="{Binding DataButtonCommand}"   CommandParameter="3" WidthRequest="100"/>
         <Button Text="Delete" Command="{Binding DeleteButtonCommand}"                      WidthRequest="100"/>
         <CollectionView ItemsSource="{Binding NumberList}" HeightRequest="400" ItemTemplate="{StaticResource TemplateSelector}" HorizontalOptions="Center" />
     </StackLayout>
