@@ -4,6 +4,7 @@
              x:Class="RouletteStatsTracker.Pages.FlowPage"
              xmlns:ViewModels ="clr-namespace:RouletteStatsTracker.ViewModels"
              xmlns:controls ="clr-namespace:RouletteStatsTracker.Controls"
+             BackgroundColor="{StaticResource rWhite}"
              Title=""
              >
 
@@ -26,7 +27,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12"/>
+                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12" VerticalOptions="Center"/>
                 <Label Text="{Binding Red}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding Black}" TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding Even}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
@@ -49,7 +50,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12"/>
+                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
                 <Label Text="{Binding Red}"   TextColor="{StaticResource rRed}"      HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding Black}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding Even}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>

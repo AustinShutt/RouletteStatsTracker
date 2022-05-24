@@ -20,6 +20,13 @@ public partial class FlowPage : ContentPage
 
         if (vm.FlowObjects.Count == 0) return;
 
-        collectionView.ScrollTo(vm.FlowObjects.Count - 1);
+        collectionView.ScrollTo(vm.FlowObjects.Count - 1, -1, ScrollToPosition.End, false);
+    }
+
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+
+        
     }
 }
