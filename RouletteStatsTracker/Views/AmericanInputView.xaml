@@ -11,13 +11,13 @@
 
     <ContentView.Resources>
         <DataTemplate x:Key="RedRowTemplate">
-            <Label Text="{Binding}" TextColor="{StaticResource rRed}"/>
+            <Label Text="{Binding}" TextColor="{StaticResource rRed}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
         <DataTemplate x:Key="BlackRowTemplate">
-            <Label Text="{Binding}" TextColor="{StaticResource rDarkBlue}"/>
+            <Label Text="{Binding}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
         <DataTemplate x:Key="GreenRowTemplate">
-            <Label Text="{Binding}" TextColor="{StaticResource rGreen}"/>
+            <Label Text="{Binding}" TextColor="{StaticResource rGreen}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
 
         <controls:AmericanInputTemplateSelector x:Key="TemplateSelector" 
@@ -34,7 +34,11 @@
           </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <VerticalStackLayout>
-                    <CollectionView ItemsSource="{Binding NumberList}" HeightRequest="470" ItemTemplate="{StaticResource TemplateSelector}" HorizontalOptions="Center" />
+
+                    <Frame BackgroundColor="{StaticResource rGray}" CornerRadius="6" WidthRequest="60">
+                        <CollectionView ItemsSource="{Binding NumberList}" HeightRequest="420" ItemTemplate="{StaticResource TemplateSelector}" HorizontalOptions="Center"  WidthRequest="60" ItemsUpdatingScrollMode="KeepItemsInView"/>
+                    </Frame>
+
                     <Button Text="Delete" Command="{Binding DeleteButtonCommand}"                      WidthRequest="80"/>
                 </VerticalStackLayout>
                 <Grid ColumnSpacing="3" RowSpacing="3">
@@ -97,8 +101,5 @@
                 </Grid>
             </HorizontalStackLayout>
         </VerticalStackLayout>
-        
-        
-        
     </StackLayout>
 </ContentView>

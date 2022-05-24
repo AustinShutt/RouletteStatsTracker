@@ -34,12 +34,12 @@ namespace RouletteStatsTracker.Graphs
             float scale = Math.Min(rect.Width / 200f, rect.Height / 200f);
             canvas.Scale(scale, scale);
             canvas.FontSize = 12;
+            canvas.StrokeSize = 1.5F;
             canvas.StrokeColor = Color.FromArgb(blue);
             canvas.FillColor   = Color.FromArgb("BDC3C7");
-            //canvas.FillCircle(0, 0, 100);
             canvas.DrawCircle(0, 0, 100);
+            canvas.StrokeSize = 1F;
             canvas.SaveState();
-            
 
             float max = NumberArray.Max();
 

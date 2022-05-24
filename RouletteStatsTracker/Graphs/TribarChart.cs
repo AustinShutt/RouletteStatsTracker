@@ -81,12 +81,25 @@ namespace RouletteStatsTracker.Graphs
            
             canvas.FontSize = 16;
             canvas.FontColor = Colors.White;
-            canvas.DrawString(titleLeft,   A/2,           18, HorizontalAlignment.Center);
-            canvas.DrawString(titleCenter, A + (B / 2),   18, HorizontalAlignment.Center);
-            canvas.DrawString(titleRight,  A + B + (C/2), 18, HorizontalAlignment.Center);
-            canvas.DrawString((ratioLeft * 100).ToString("0.0") + "%",   A/2, 33, HorizontalAlignment.Center);
-            canvas.DrawString((ratioCenter * 100).ToString("0.0") + "%", A + (B/2), 33, HorizontalAlignment.Center); 
-            canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", A + B + (C / 2), 33, HorizontalAlignment.Center);
+
+            int heightText = 18;
+            int heightNum =  33;
+
+#if WINDOWS10_0_17763_0_OR_GREATER
+            heightText = 12;
+            heightNum = 28;
+#endif
+
+            canvas.DrawString(titleLeft,   A/2,           heightText, HorizontalAlignment.Center);
+            canvas.DrawString(titleCenter, A + (B / 2),   heightText, HorizontalAlignment.Center);
+            canvas.DrawString(titleRight,  A + B + (C/2), heightText, HorizontalAlignment.Center);
+
+
+
+
+            canvas.DrawString((ratioLeft * 100).ToString("0.0") + "%",   A/2, heightNum, HorizontalAlignment.Center);
+            canvas.DrawString((ratioCenter * 100).ToString("0.0") + "%", A + (B/2), heightNum, HorizontalAlignment.Center); 
+            canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", A + B + (C / 2), heightNum, HorizontalAlignment.Center);
             canvas.Translate(-5, -20);
             canvas.ResetState();
         }
