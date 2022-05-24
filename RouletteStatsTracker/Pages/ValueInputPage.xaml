@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RouletteStatsTracker.Pages.ValueInputPage"
-             Title="Press the Winning Numbers!">
+             Title="">
 
-    <StackLayout x:Name="baseLayout">
+    <StackLayout x:Name="baseLayout" VerticalOptions="Center" BackgroundColor="{StaticResource rWhite}">
         
         <!--This content will be defined at runtime by adding a content view to the stacklayout.-->
         

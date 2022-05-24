@@ -11,13 +11,13 @@
 
     <ContentView.Resources>
         <DataTemplate x:Key="RedRowTemplate">
-            <Label Text="{Binding}" TextColor="{StaticResource rRed}"/>
+            <Label Text="{Binding}" TextColor="{StaticResource rRed}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
         <DataTemplate x:Key="BlackRowTemplate">
-            <Label Text="{Binding}" TextColor="{StaticResource rDarkBlue}"/>
+            <Label Text="{Binding}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
         <DataTemplate x:Key="GreenRowTemplate">
-            <Label Text="{Binding}" TextColor="{StaticResource rGreen}"/>
+            <Label Text="{Binding}" TextColor="{StaticResource rGreen}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
 
         <controls:AmericanInputTemplateSelector x:Key="TemplateSelector" 
@@ -27,9 +27,44 @@
     </ContentView.Resources>
     
     <StackLayout>
+<<<<<<< Updated upstream
         <Label Text="Example CollectionView Functionality"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+=======
+        <VerticalStackLayout>
+          <HorizontalStackLayout Padding="75,0,0,3" HorizontalOptions="Center" Spacing="3">
+                <Button Text="0"  Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="0"  WidthRequest="100"/>
+                <Button Text="00" Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="00" WidthRequest="100"/>
+          </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Frame BackgroundColor="{StaticResource rGray}" CornerRadius="6" WidthRequest="60">
+                        <CollectionView ItemsSource="{Binding NumberList}" HeightRequest="420" ItemTemplate="{StaticResource TemplateSelector}" HorizontalOptions="Center"  WidthRequest="60" ItemsUpdatingScrollMode="KeepItemsInView"/>
+                    </Frame>
+                    <Button Text="Delete" Command="{Binding DeleteButtonCommand}"                      WidthRequest="80"/>
+                </VerticalStackLayout>
+                <Grid ColumnSpacing="3" RowSpacing="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+>>>>>>> Stashed changes
 
         <Button Text="0"      Command="{Binding DataButtonCommand}"   CommandParameter="0" WidthRequest="100"/>
         <Button Text="1"      Command="{Binding DataButtonCommand}"   CommandParameter="1" WidthRequest="100"/>
