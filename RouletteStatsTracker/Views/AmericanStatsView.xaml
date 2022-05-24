@@ -45,6 +45,10 @@
                 <x:Boolean>true</x:Boolean>
             </x:Arguments>
         </drawable:TribarChart>
+        <drawable:RadarGraph x:Key="RadarChart" x:Name="radarGraph">
+            <x:Arguments>
+            </x:Arguments>
+        </drawable:RadarGraph>
         
     </ContentView.Resources>
 
@@ -57,5 +61,6 @@
         </StackLayout>
         <GraphicsView x:Name="ColumnSurface" Drawable="{StaticResource ColumnChart}" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
         <GraphicsView x:Name="ThirdsSurface" Drawable="{StaticResource ThirdsChart}" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <GraphicsView x:Name="RadarSurface" Drawable="{StaticResource RadarChart}" HeightRequest="300" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25"/>
     </StackLayout>
 </ContentView>
