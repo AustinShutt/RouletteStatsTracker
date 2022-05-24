@@ -17,7 +17,7 @@ namespace RouletteStatsTracker.Controls
         {
             FlowObject flowObject = item as FlowObject;
 
-            return flowObject.Red.Equals("-") || flowObject.Red.Equals("--") ? GreenRow : OtherRow;
+            return flowObject.Red.Equals("0") || flowObject.Red.Equals("00") ? GreenRow : OtherRow;
         }
     }
 }

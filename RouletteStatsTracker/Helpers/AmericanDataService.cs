@@ -33,7 +33,8 @@ namespace RouletteStatsTracker.Helpers
                 DataStore.NumberArray[0]++;
                 DataStore.Total++;
 
-                flowObject.Red   = "-";
+                flowObject.Num = DataStore.FlowObjects.Count + 1;
+                flowObject.Red   = "0";
                 flowObject.Black = "-";
                 flowObject.Even  = "-";
                 flowObject.Odd   = "-";
@@ -48,7 +49,8 @@ namespace RouletteStatsTracker.Helpers
                 DataStore.NumberArray[37]++;
                 DataStore.Total++;
 
-                flowObject.Red   = "-";
+                flowObject.Num = DataStore.FlowObjects.Count + 1;
+                flowObject.Red   = "00";
                 flowObject.Black = "-";
                 flowObject.Even  = "-";
                 flowObject.Odd   = "-";
@@ -122,8 +124,8 @@ namespace RouletteStatsTracker.Helpers
 
             //Add Totals and flowObject and return
             DataStore.Total++;
+            flowObject.Num = DataStore.FlowObjects.Count + 1;
             DataStore.FlowObjects.Add(flowObject);
-
         }
         public void Delete(String str) {
             

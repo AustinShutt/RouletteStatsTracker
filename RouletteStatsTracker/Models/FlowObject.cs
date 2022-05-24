@@ -8,6 +8,7 @@ namespace RouletteStatsTracker.Models
 {
     public class FlowObject
     {
+        public int Num { get; set; }
         public String Red { get; set; }
         public String Black { get; set; }
         public String Even { get; set; }
