@@ -13,7 +13,8 @@
     <Color x:Key="rLightBlue">#2D9BF0</Color>
 
     <!-- Template Project Colors -->
-    <Color x:Key="Primary">#512BD4</Color>
+    <!--<Color x:Key="Primary">#512BD4</Color>-->
+    <Color x:Key="Primary">#2C3E50</Color>
     <Color x:Key="Light">#DFD8F7</Color>
     <Color x:Key="Dark">#2B0B98</Color>
     <Color x:Key="White">White</Color>
@@ -23,7 +24,7 @@
     <Color x:Key="DarkGray">#505050</Color>
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="LightBrush" Color="{StaticResource Light}"/>
-    <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource Dark}"/>
+    <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
     <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGray}"/>
