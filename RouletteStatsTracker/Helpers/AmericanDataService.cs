@@ -148,7 +148,7 @@ namespace RouletteStatsTracker.Helpers
             //Convert string to integer value
             int value = int.Parse(str);
 
-            DataStore.NumberArray[value]++;
+            DataStore.NumberArray[value]--;
 
             // Parse RED / BLACK
             if (isRed[value])

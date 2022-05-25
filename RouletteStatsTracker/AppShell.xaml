@@ -8,13 +8,13 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Input">
+        <Tab Title="Input" Icon="input_icon.png">
             <ShellContent  ContentTemplate="{DataTemplate pages:ValueInputPage}"/>
         </Tab>
-        <Tab Title="Flow">
+        <Tab Title="Flow" Icon="flow_icon.png">
             <ShellContent  ContentTemplate="{DataTemplate pages:FlowPage}" />
         </Tab>
-        <Tab Title="Stats">
+        <Tab Title="Stats" Icon="stats_icon.png">
             <ShellContent  ContentTemplate="{DataTemplate pages:StatsPage}" />
         </Tab>
     </TabBar>

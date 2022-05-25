@@ -32,8 +32,8 @@
                 <Label Text="{Binding Black}" TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding Even}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
                 <Label Text="{Binding Odd}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="4" FontSize="20"/>
-                <Label Text="{Binding High}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
-                <Label Text="{Binding Low}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
+                <Label Text="{Binding Low}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
+                <Label Text="{Binding High}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="NormalTemplate">
@@ -55,8 +55,9 @@
                 <Label Text="{Binding Black}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding Even}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
                 <Label Text="{Binding Odd}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="4" FontSize="20"/>
-                <Label Text="{Binding High}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
-                <Label Text="{Binding Low}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
+                <Label Text="{Binding Low}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
+                <Label Text="{Binding High}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
+               
             </Grid>
         </DataTemplate>
         
@@ -74,8 +75,8 @@
                 <Label Text="BLACK" TextColor="{StaticResource rDarkBlue}" FontSize="20" FontAttributes="Bold"/>
                 <Label Text="EVEN"  TextColor="{StaticResource rDarkBlue}" FontSize="20" FontAttributes="Bold"/>
                 <Label Text="ODD"   TextColor="{StaticResource rDarkBlue}" FontSize="20" FontAttributes="Bold"/>
-                <Label Text="HIGH"  TextColor="{StaticResource rDarkBlue}" FontSize="20" FontAttributes="Bold"/>
                 <Label Text="LOW"   TextColor="{StaticResource rDarkBlue}" FontSize="20" FontAttributes="Bold"/>
+                <Label Text="HIGH"  TextColor="{StaticResource rDarkBlue}" FontSize="20" FontAttributes="Bold"/>
             </HorizontalStackLayout>
         </Frame>
         

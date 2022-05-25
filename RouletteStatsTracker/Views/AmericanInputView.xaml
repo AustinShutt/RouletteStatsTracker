@@ -28,7 +28,8 @@
 
     <StackLayout Margin="5,0">
         <VerticalStackLayout>
-          <HorizontalStackLayout Padding="75,0,0,3" HorizontalOptions="Center" Spacing="3">
+          <HorizontalStackLayout Padding="3,0,3,3" Spacing="3">
+                <ImageButton Source="settings_icon.png" WidthRequest="60" HeightRequest="40" Padding="3,0,0,0" Margin="0,0,50,0" />
                 <Button Text="0"  Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="0"  WidthRequest="100"/>
                 <Button Text="00" Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="00" WidthRequest="100"/>
           </HorizontalStackLayout>
@@ -39,7 +40,7 @@
                         <CollectionView ItemsSource="{Binding NumberList}" HeightRequest="440" ItemTemplate="{StaticResource TemplateSelector}" HorizontalOptions="Center"  WidthRequest="60" ItemsUpdatingScrollMode="KeepItemsInView"/>
                     </Frame>
 
-                    <ImageButton Source="delete_icon.png" Command="{Binding DeleteButtonCommand}"  Padding="0,5,0,5"         HeightRequest="60"           WidthRequest="50"/>
+                    <ImageButton Source="delete_icon.png" Command="{Binding DeleteButtonCommand}"  Padding="0,5,0,5" HeightRequest="60" WidthRequest="50"/>
                 </VerticalStackLayout>
                 <Grid ColumnSpacing="3" RowSpacing="3" Margin="0,0,4,0">
                     <Grid.RowDefinitions>
