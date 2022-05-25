@@ -49,6 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\delete_icon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\delete_icon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Pages\FlowPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

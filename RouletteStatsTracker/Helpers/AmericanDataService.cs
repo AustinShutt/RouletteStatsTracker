@@ -90,7 +90,7 @@ namespace RouletteStatsTracker.Helpers
             {
                 DataStore.Odd++;
                 flowObject.Even = "";
-                flowObject.Odd = "";
+                flowObject.Odd = "O";
             }
 
             //Parse Hi/Low
