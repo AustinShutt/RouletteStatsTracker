@@ -9,7 +9,18 @@
     </Shell.TabBarIsVisible>
 
 
-    <StackLayout>
-        
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Label Text="Game Type" HorizontalOptions="Center" FontSize="30"/>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="40" Margin="0,0,0,30">
+            <RadioButton Content="American" IsChecked="True"/>
+            <RadioButton Content="European"/>
+        </HorizontalStackLayout>
+        <Label Text="Theme" HorizontalOptions="Center" FontSize="30" />
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="90" Margin="0,0,0,30">
+            <RadioButton Content="Light" IsChecked="True"/>
+            <RadioButton Content="Dark" />
+        </HorizontalStackLayout>
+
+        <Button Text="Clear Session Data" Style="{StaticResource DarkButton}" WidthRequest="300"/>
     </StackLayout>
 </ContentPage>
