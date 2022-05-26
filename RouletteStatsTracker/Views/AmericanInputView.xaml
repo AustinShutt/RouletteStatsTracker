@@ -77,7 +77,7 @@
                     <Button Text="12" Grid.Row="3" Grid.Column="2" Style="{StaticResource RedButton}"   Command="{Binding DataButtonCommand}" CommandParameter="12" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="13" Grid.Row="4" Grid.Column="0"  Style="{StaticResource DarkButton}" Command="{Binding DataButtonCommand}" CommandParameter="13" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="14" Grid.Row="4" Grid.Column="1"  Style="{StaticResource RedButton}"  Command="{Binding DataButtonCommand}" CommandParameter="14" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
-                    <Button Text="15" Grid.Row="4" Grid.Column="2" Style="{StaticResource RedButton}"   Command="{Binding DataButtonCommand}" CommandParameter="15" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
+                    <Button Text="15" Grid.Row="4" Grid.Column="2" Style="{StaticResource DarkButton}"   Command="{Binding DataButtonCommand}" CommandParameter="15" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="16" Grid.Row="5" Grid.Column="0"  Style="{StaticResource RedButton}"  Command="{Binding DataButtonCommand}" CommandParameter="16" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="17" Grid.Row="5" Grid.Column="1"  Style="{StaticResource DarkButton}" Command="{Binding DataButtonCommand}" CommandParameter="17" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="18" Grid.Row="5" Grid.Column="2" Style="{StaticResource RedButton}"   Command="{Binding DataButtonCommand}" CommandParameter="18" WidthRequest="100"  MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
@@ -97,7 +97,7 @@
                     <Button Text="32" Grid.Row="10" Grid.Column="1"  Style="{StaticResource RedButton}"  Command="{Binding DataButtonCommand}" CommandParameter="32" WidthRequest="100" MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="33" Grid.Row="10" Grid.Column="2" Style="{StaticResource DarkButton}"  Command="{Binding DataButtonCommand}" CommandParameter="33" WidthRequest="100" MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="34" Grid.Row="11" Grid.Column="0"  Style="{StaticResource RedButton}"  Command="{Binding DataButtonCommand}" CommandParameter="34" WidthRequest="100" MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
-                    <Button Text="35" Grid.Row="11" Grid.Column="1"  Style="{StaticResource RedButton}"  Command="{Binding DataButtonCommand}" CommandParameter="35" WidthRequest="100" MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
+                    <Button Text="35" Grid.Row="11" Grid.Column="1"  Style="{StaticResource DarkButton}"  Command="{Binding DataButtonCommand}" CommandParameter="35" WidthRequest="100" MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                     <Button Text="36" Grid.Row="11" Grid.Column="2" Style="{StaticResource RedButton}"   Command="{Binding DataButtonCommand}" CommandParameter="36" WidthRequest="100" MinimumWidthRequest="42"  MinimumHeightRequest="42"/>
                 </Grid>
             </HorizontalStackLayout>
