@@ -27,6 +27,7 @@ namespace RouletteStatsTracker.Helpers
         public void Add(String str) {
             
             FlowObject flowObject = new FlowObject();
+            CTObject   ctObject   = new CTObject();
 
             if(str.Equals("0"))
             {
@@ -41,7 +42,18 @@ namespace RouletteStatsTracker.Helpers
                 flowObject.Low   = "-";
                 flowObject.High  = "-";
 
+
+                ctObject.Num = DataStore.FlowObjects.Count + 1;
+                ctObject.C1 = "0";
+                ctObject.C2 = "-";
+                ctObject.C3 = "-";
+                ctObject.T1 = "-";
+                ctObject.T2 = "-";
+                ctObject.T3 = "-";
+
+
                 DataStore.FlowObjects.Add(flowObject);
+                DataStore.CTObjects.Add(ctObject);
                 return;
             }
             if(str.Equals("00"))
@@ -57,7 +69,16 @@ namespace RouletteStatsTracker.Helpers
                 flowObject.Low   = "-";
                 flowObject.High  = "-";
 
+                ctObject.Num = DataStore.FlowObjects.Count + 1;
+                ctObject.C1 = "00";
+                ctObject.C2 = "-";
+                ctObject.C3 = "-";
+                ctObject.T1 = "-";
+                ctObject.T2 = "-";
+                ctObject.T3 = "-";
+
                 DataStore.FlowObjects.Add(flowObject);
+                DataStore.CTObjects.Add(ctObject);
                 return;
             }
             //Convert string to integer value
@@ -107,30 +128,62 @@ namespace RouletteStatsTracker.Helpers
                 flowObject.Low = "L";
             }
 
+            ctObject.C1 = "";
+            ctObject.C2 = "";
+            ctObject.C3 = "";
+
             //Parse C1vC2vC3
             if (value % 3 == 1)
+            {
                 DataStore.Column1++;
+                ctObject.C1 = str;
+            }
             else if (value % 3 == 2)
+            {
                 DataStore.Column2++;
+                ctObject.C2 = str;
+            }
             else
+            {
                 DataStore.Column3++;
+                ctObject.C3 = str;
+            }
+
+
+            ctObject.T1 = "";
+            ctObject.T2 = "";
+            ctObject.T3 = "";
+
 
             if (value <= 12)
+            {
                 DataStore.Third1++;
+                ctObject.T1 = str;
+            }
+
             else if (value <= 24)
+            { 
                 DataStore.Third2++;
+                ctObject.T2 = str;
+            }
             else
+            {
                 DataStore.Third3++;
+                ctObject.T3 = str;  
+            }
 
             //Add Totals and flowObject and return
             DataStore.Total++;
             flowObject.Num = DataStore.FlowObjects.Count + 1;
+            ctObject.Num = DataStore.FlowObjects.Count + 1; 
             DataStore.FlowObjects.Add(flowObject);
+            DataStore.CTObjects.Add(ctObject);
         }
         public void Delete(String str) {
             
             DataStore.FlowObjects.Remove(DataStore.FlowObjects.Last<FlowObject>());
-            
+            DataStore.CTObjects.Remove(DataStore.CTObjects.Last<CTObject>());
+
             if (str.Equals("0"))
             {
                 DataStore.NumberArray[0]--;

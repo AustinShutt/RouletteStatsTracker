@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RouletteStatsTracker.Pages.CTFlowPage"
+             xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
+             xmlns:controls="clr-namespace:RouletteStatsTracker.Controls"
+             Title="">
+    
+    <ContentPage.BindingContext>
+        <ViewModels:FlowViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="GreenTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12" VerticalOptions="Center"/>
+                <Label Text="{Binding C1}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
+                <Label Text="{Binding C2}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
+                <Label Text="{Binding C3}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
+                <Label Text="{Binding T1}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="4" FontSize="20"/>
+                <Label Text="{Binding T2}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
+                                    <Label  Text="{Binding T3}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="NormalTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
+                <Label Text="{Binding C1}"    TextColor="{StaticResource rDarkBlue}"      HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
+                <Label Text="{Binding C2}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
+                <Label Text="{Binding C3}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
+                <Label Text="{Binding T1}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="4" FontSize="20"/>
+                <Label Text="{Binding T2}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
+                <Label Text="{Binding T3}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
+
+            </Grid>
+        </DataTemplate>
+
+        <controls:CTTemplateSelector x:Key="TemplateSelector" 
+                                                GreenRow  ="{StaticResource GreenTemplate}  " 
+                                                OtherRow  ="{StaticResource NormalTemplate}" />
+    </ContentPage.Resources>
+
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="5, 0">
+        <Frame BackgroundColor="{StaticResource rGray}" WidthRequest="1000">
+            <Grid WidthRequest="350">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="#"     TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="COL-1" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="1" />
+                <Label Text="COL-2" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="2" />
+                <Label Text="COL-3" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
+                <Label Text="T-1"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
+                <Label Text="T-2"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="5" />
+                <Label Text="T-3"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="End"    Grid.Row="0" Grid.Column="6" />
+            </Grid>
+        </Frame>
+
+        <CollectionView x:Name="collectionView" 
+                        ItemsSource="{Binding dataStore.CTObjects}" 
+                        ItemTemplate="{StaticResource TemplateSelector}"  
+                        HeightRequest="500"
+                        WidthRequest="350"
+                        />
+    </StackLayout>
+</ContentPage>
