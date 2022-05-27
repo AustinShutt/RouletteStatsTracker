@@ -2,10 +2,71 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RouletteStatsTracker.Pages.StatsPage"
+             xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
+             xmlns:drawable="clr-namespace:RouletteStatsTracker.Graphs"
              Title="">
-    
-    
-    <StackLayout x:Name="baseLayout">
-    
+
+    <ContentPage.BindingContext>
+        <ViewModels:AmericanStatsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <drawable:DonutChart x:Key="RedBlackChart" x:Name="redBlackDonut" x:DataType="graph:MauiDrawable">
+            <x:Arguments>
+                <x:String>Red</x:String>
+                <x:String>Black</x:String>
+            </x:Arguments>
+        </drawable:DonutChart>
+        <drawable:DonutChart x:Key="EvenOddChart" x:Name="evenOddDonut" x:DataType="graph:MauiDrawable">
+            <x:Arguments>
+                <x:String>Even</x:String>
+                <x:String>Odd</x:String>
+            </x:Arguments>
+        </drawable:DonutChart>
+        <drawable:DonutChart x:Key="HighLowChart" x:Name="highLowDonut" x:DataType="graph:MauiDrawable">
+            <x:Arguments>
+                <x:String>High</x:String>
+                <x:String>Low</x:String>
+            </x:Arguments>
+        </drawable:DonutChart>
+        <drawable:TribarChart x:Key="ColumnChart" x:Name="columnTribar">
+            <x:Arguments>
+                <x:String>C1</x:String>
+                <x:String>C2</x:String>
+                <x:String>C3</x:String>
+                <x:Boolean>false</x:Boolean>
+            </x:Arguments>
+        </drawable:TribarChart>
+        <drawable:TribarChart x:Key="ThirdsChart" x:Name="thirdsTribar">
+            <x:Arguments>
+                <x:String>T1</x:String>
+                <x:String>T2</x:String>
+                <x:String>T3</x:String>
+                <x:Boolean>true</x:Boolean>
+            </x:Arguments>
+        </drawable:TribarChart>
+        <drawable:RadarGraph x:Key="RadarChart" x:Name="radarGraph">
+            <x:Arguments>
+            </x:Arguments>
+        </drawable:RadarGraph>
+        <drawable:RadarGraph x:Key="ERadarChart" x:Name="EradarGraph">
+            <x:Arguments>
+            </x:Arguments>
+        </drawable:RadarGraph>
+
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <GraphicsView x:Name="RedBlackSurface" Drawable="{StaticResource RedBlackChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
+            <GraphicsView x:Name="EvenOddSurface"  Drawable="{StaticResource EvenOddChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
+            <GraphicsView x:Name="HighLowSurface"  Drawable="{StaticResource HighLowChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
+        </StackLayout>
+
+        <GraphicsView x:Name="ColumnSurface" Drawable="{StaticResource ColumnChart}" HeightRequest="48"  WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <GraphicsView x:Name="ThirdsSurface" Drawable="{StaticResource ThirdsChart}" HeightRequest="48"  WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <StackLayout x:Name="radarView"/>
+
+        <!--<GraphicsView x:Name="RadarSurface"  Drawable="{DynamicResource RadarChart}"  HeightRequest="350" WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25"/>-->
     </StackLayout>
 </ContentPage>
