@@ -67,7 +67,8 @@ namespace RouletteStatsTracker.Graphs
             }
             else
             {
-                proportion = (360F * ratioLeft) + 90;
+                proportion = (ratioLeft / (ratioLeft + ratioRight)) * 360 + 90F;
+
                 if (proportion > 360F) proportion -= 360F;
 
                 canvas.StrokeColor = Color.FromArgb("2C3E50");

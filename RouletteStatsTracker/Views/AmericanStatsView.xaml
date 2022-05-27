@@ -52,16 +52,15 @@
         
     </ContentView.Resources>
 
-    <StackLayout HorizontalOptions="Center">
-       
+    <StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
             <GraphicsView x:Name="RedBlackSurface" Drawable="{StaticResource RedBlackChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
             <GraphicsView x:Name="EvenOddSurface"  Drawable="{StaticResource EvenOddChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
             <GraphicsView x:Name="HighLowSurface"  Drawable="{StaticResource HighLowChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
         </StackLayout>
 
-        <GraphicsView x:Name="ColumnSurface" Drawable="{StaticResource ColumnChart}" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <GraphicsView x:Name="ThirdsSurface" Drawable="{StaticResource ThirdsChart}" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <GraphicsView x:Name="RadarSurface" Drawable="{StaticResource RadarChart}" HeightRequest="350" WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25"/>
+        <GraphicsView x:Name="ColumnSurface" Drawable="{StaticResource ColumnChart}" HeightRequest="48"  WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <GraphicsView x:Name="ThirdsSurface" Drawable="{StaticResource ThirdsChart}" HeightRequest="48"  WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <GraphicsView x:Name="RadarSurface"  Drawable="{StaticResource RadarChart}"  HeightRequest="350" WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25"/>
     </StackLayout>
 </ContentView>
