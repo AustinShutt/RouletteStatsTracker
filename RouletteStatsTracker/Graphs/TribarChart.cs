@@ -59,15 +59,12 @@ namespace RouletteStatsTracker.Graphs
             canvas.Translate(5, 20);
 
             float totalWidth = 400F;
+            float ratioTotal = ratioLeft + ratioCenter + ratioRight;
 
-            float A = ratioLeft * totalWidth;
-            float B = ratioCenter * totalWidth;
-            float C = ratioRight * totalWidth;
-            float remainder = totalWidth - (A + B + C);
 
-            A += (remainder / 3F);
-            B += (remainder / 3F);
-            C += (remainder / 3F);
+            float A = (ratioLeft /ratioTotal) * totalWidth;
+            float B = (ratioCenter/ratioTotal) * totalWidth;
+            float C = (ratioRight / ratioTotal) * totalWidth;
 
             canvas.FillColor = Color.FromArgb("2C3E50");
             canvas.FillRectangle(0, 0, A, 40);
@@ -90,16 +87,22 @@ namespace RouletteStatsTracker.Graphs
             heightNum = 28;
 #endif
 
-            canvas.DrawString(titleLeft,   A/2,           heightText, HorizontalAlignment.Center);
-            canvas.DrawString(titleCenter, A + (B / 2),   heightText, HorizontalAlignment.Center);
-            canvas.DrawString(titleRight,  A + B + (C/2), heightText, HorizontalAlignment.Center);
-
-
-
-
-            canvas.DrawString((ratioLeft * 100).ToString("0.0") + "%",   A/2, heightNum, HorizontalAlignment.Center);
-            canvas.DrawString((ratioCenter * 100).ToString("0.0") + "%", A + (B/2), heightNum, HorizontalAlignment.Center); 
-            canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", A + B + (C / 2), heightNum, HorizontalAlignment.Center);
+            if(A > 25F)
+            {
+                canvas.DrawString(titleLeft, A / 2, heightText, HorizontalAlignment.Center);
+                canvas.DrawString((ratioLeft * 100).ToString("0.0") + "%", A / 2, heightNum, HorizontalAlignment.Center);
+            }
+            if(B> 25F)
+            {
+                canvas.DrawString(titleCenter, A + (B / 2), heightText, HorizontalAlignment.Center);
+                canvas.DrawString((ratioCenter * 100).ToString("0.0") + "%", A + (B / 2), heightNum, HorizontalAlignment.Center);
+            }
+            if(C> 25F)
+            {
+                canvas.DrawString(titleRight, A + B + (C / 2), heightText, HorizontalAlignment.Center);
+                canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", A + B + (C / 2), heightNum, HorizontalAlignment.Center);
+            }
+            
             canvas.Translate(-5, -20);
             canvas.ResetState();
         }
