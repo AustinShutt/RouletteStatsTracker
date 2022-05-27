@@ -5,8 +5,8 @@ using RouletteStatsTracker.Pages;
 
 public partial class EuropeanInputView : ContentView
 {
-	AmericanInputViewModel americanInputViewModel;
-	public EuropeanInputView(AmericanInputViewModel americanInputViewModel)
+	InputViewModel americanInputViewModel;
+	public EuropeanInputView(InputViewModel americanInputViewModel)
     {
         InitializeComponent();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RouletteStatsTracker.Controls
 {
-    public class AmericanInputTemplateSelector : DataTemplateSelector
+    public class InputTemplateSelector : DataTemplateSelector
     {
         public DataTemplate RedRow { get; set; }
         public DataTemplate BlackRow { get; set; }

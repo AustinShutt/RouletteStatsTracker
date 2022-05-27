@@ -11,18 +11,18 @@ using RouletteStatsTracker.Models;
 
 namespace RouletteStatsTracker.ViewModels
 {
-    public class AmericanInputViewModel
+    public class InputViewModel
     {
         public ObservableCollection<String> NumberList { get; set; }
         private Stack<String> OverFlow { get; set; }
         public ICommand  DataButtonCommand { get; set; }
         public ICommand DeleteButtonCommand { get; set; }
         
-        private AmericanDataService dataService;    //Acts on the data set using methods for the American wheel, Add, Delete etc..
+        private UtilityDataService dataService;    //Acts on the data set using methods for the American wheel, Add, Delete etc..
         
-        public AmericanInputViewModel()
+        public InputViewModel()
         {
-            dataService = ServiceHelper.GetService<AmericanDataService>();
+            dataService = ServiceHelper.GetService<UtilityDataService>();
 
             NumberList = new ObservableCollection<string>();
 

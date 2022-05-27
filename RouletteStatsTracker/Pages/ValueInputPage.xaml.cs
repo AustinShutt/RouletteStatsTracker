@@ -9,7 +9,7 @@ public partial class ValueInputPage : ContentPage
 {
 	AmericanInputView americanInputView;
 	EuropeanInputView europeanInputView;
-    AmericanInputViewModel vm;
+    InputViewModel vm;
 
     Settings Settings { get; set; }
     Settings.GameType GameType { get; set; }
@@ -23,7 +23,7 @@ public partial class ValueInputPage : ContentPage
         this.americanInputView = americanInputView;
         this.europeanInputView = europeanInputView;
 
-        this.BindingContext = vm = ServiceHelper.GetService<AmericanInputViewModel>();
+        this.BindingContext = vm = ServiceHelper.GetService<InputViewModel>();
 
         SetGameType(Settings.gameType);
     }

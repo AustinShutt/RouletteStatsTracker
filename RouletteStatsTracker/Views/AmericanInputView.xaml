@@ -5,7 +5,7 @@
              x:Class="RouletteStatsTracker.Views.AmericanInputView">
 
     <ContentView.BindingContext>
-        <ViewModels:AmericanInputViewModel/>
+        <ViewModels:InputViewModel/>
     </ContentView.BindingContext>
 
     <HorizontalStackLayout Padding="3,0,3,3" Spacing="3">

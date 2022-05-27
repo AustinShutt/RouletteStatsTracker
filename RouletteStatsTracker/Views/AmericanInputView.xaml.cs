@@ -4,9 +4,9 @@ using RouletteStatsTracker.ViewModels;
 using RouletteStatsTracker.Pages;
 public partial class AmericanInputView : ContentView
 {
-	AmericanInputViewModel americanInputViewModel;
+	InputViewModel americanInputViewModel;
 
-	public AmericanInputView(AmericanInputViewModel americanInputViewModel)
+	public AmericanInputView(InputViewModel americanInputViewModel)
     {
         InitializeComponent();
         BindingContext = this.americanInputViewModel = americanInputViewModel;

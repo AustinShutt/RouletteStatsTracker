@@ -7,7 +7,7 @@ using RouletteStatsTracker.Models;
 
 namespace RouletteStatsTracker.Helpers
 {
-    public class AmericanDataService
+    public class UtilityDataService
     {
         private DataStore DataStore { get; set; }
                        //Null  //1     2     3      4      5      6      7      8      9    10
@@ -19,7 +19,7 @@ namespace RouletteStatsTracker.Helpers
                                 //31    32   33     34     35     36
                                 false, true, false, true, false, true};
 
-        public AmericanDataService(DataStore DataStore) 
+        public UtilityDataService(DataStore DataStore) 
         {
             this.DataStore = DataStore;
         }

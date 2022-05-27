@@ -4,7 +4,7 @@
              xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
              x:Class="RouletteStatsTracker.Views.EuropeanInputView">
     <ContentView.BindingContext>
-        <ViewModels:AmericanInputViewModel/>
+        <ViewModels:InputViewModel/>
     </ContentView.BindingContext>
 
     <HorizontalStackLayout Padding="3,0,3,3" Spacing="3">

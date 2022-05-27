@@ -29,11 +29,10 @@ public static class MauiProgram
 		//Add Model Singletons
 		builder.Services.AddSingleton<DataStore>();
 		builder.Services.AddSingleton<Settings>();
-		builder.Services.AddSingleton<AmericanDataService>();
+		builder.Services.AddSingleton<UtilityDataService>();
 
 		//Add ViewModel Singletons
-		builder.Services.AddSingleton<AmericanInputViewModel>();
-        builder.Services.AddSingleton<EuropeanInputViewModel>();
+		builder.Services.AddSingleton<InputViewModel>();
         builder.Services.AddSingleton<AmericanStatsViewModel>();
         builder.Services.AddSingleton<EuropeanStatsViewModel>();
 		builder.Services.AddSingleton<FlowViewModel>();
