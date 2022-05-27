@@ -8,10 +8,10 @@ using RouletteStatsTracker.Models;
 
 namespace RouletteStatsTracker.ViewModels
 {
-    public class AmericanStatsViewModel
+    public class StatsViewModel
     {
         public DataStore dataStore { get; set; }
-        public AmericanStatsViewModel()
+        public StatsViewModel()
         {
             dataStore = ServiceHelper.GetService<DataStore>();
         }

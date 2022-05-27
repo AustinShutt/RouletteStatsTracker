@@ -33,8 +33,7 @@ public static class MauiProgram
 
 		//Add ViewModel Singletons
 		builder.Services.AddSingleton<InputViewModel>();
-        builder.Services.AddSingleton<AmericanStatsViewModel>();
-        builder.Services.AddSingleton<EuropeanStatsViewModel>();
+        builder.Services.AddSingleton<StatsViewModel>();
 		builder.Services.AddSingleton<FlowViewModel>();
 
         //Add View Singletons
