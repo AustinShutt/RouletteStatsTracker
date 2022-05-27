@@ -6,12 +6,12 @@ using RouletteStatsTracker.Helpers;
 
 public partial class AmericanStatsView : ContentView
 {
-	AmericanStatsViewModel vm;
+	StatsViewModel vm;
     
-	public AmericanStatsView(AmericanStatsViewModel americanStatsViewModel)
+	public AmericanStatsView(StatsViewModel vm)
     {
         InitializeComponent();
-        BindingContext = this.vm = americanStatsViewModel;
+        BindingContext = this.vm = vm;
     }
 
     public void Appearing() {

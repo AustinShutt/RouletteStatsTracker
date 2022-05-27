@@ -6,7 +6,7 @@
              x:Class="RouletteStatsTracker.Views.EuropeanStatsView">
 
     <ContentView.BindingContext>
-        <ViewModels:AmericanStatsViewModel/>
+        <ViewModels:StatsViewModel/>
     </ContentView.BindingContext>
     <ContentView.Resources>
         <drawable:ERadarGraph x:Key="ERadarChart" x:Name="EradarGraph">

@@ -8,7 +8,7 @@ public partial class StatsPage : ContentPage
 {
     AmericanStatsView americanStatsView;
     EuropeanStatsView europeanStatsView;
-    AmericanStatsViewModel vm;
+    StatsViewModel vm;
     Settings Settings { get; set; }
 
     Settings.GameType type;
@@ -19,7 +19,7 @@ public partial class StatsPage : ContentPage
 
         americanStatsView = ServiceHelper.GetService<AmericanStatsView>();
         europeanStatsView = ServiceHelper.GetService<EuropeanStatsView>();
-        vm = ServiceHelper.GetService<AmericanStatsViewModel>();
+        vm = ServiceHelper.GetService<StatsViewModel>();
         Settings = ServiceHelper.GetService<Settings>();
 
         SetGameType(Settings.gameType);

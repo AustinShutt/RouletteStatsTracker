@@ -3,12 +3,12 @@ namespace RouletteStatsTracker.Views;
 using RouletteStatsTracker.ViewModels;
 public partial class EuropeanStatsView : ContentView
 {
-	AmericanStatsViewModel vm;
-	public EuropeanStatsView(AmericanStatsViewModel europeanStatsViewModel)
+	StatsViewModel vm;
+	public EuropeanStatsView(StatsViewModel vm)
 	{
 		InitializeComponent();
 
-		BindingContext = this.vm = europeanStatsViewModel;
+		BindingContext = this.vm = vm;
 	}
 
     public void Appearing()

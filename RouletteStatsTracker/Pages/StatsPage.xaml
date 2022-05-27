@@ -7,7 +7,7 @@
              Title="">
 
     <ContentPage.BindingContext>
-        <ViewModels:AmericanStatsViewModel/>
+        <ViewModels:StatsViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>

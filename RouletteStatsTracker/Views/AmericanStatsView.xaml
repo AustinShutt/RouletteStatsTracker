@@ -7,7 +7,7 @@
              x:Class="RouletteStatsTracker.Views.AmericanStatsView">
 
     <ContentView.BindingContext>
-        <ViewModels:AmericanStatsViewModel/>
+        <ViewModels:StatsViewModel/>
     </ContentView.BindingContext>
 
     <ContentView.Resources>
