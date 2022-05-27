@@ -12,8 +12,8 @@
     <StackLayout VerticalOptions="CenterAndExpand">
         <Label Text="Game Type" HorizontalOptions="Center" FontSize="30"/>
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="40" Margin="0,0,0,30">
-            <RadioButton Content="American" IsChecked="True"/>
-            <RadioButton Content="European"/>
+            <RadioButton x:Name="AmericanOption" Content="American" CheckedChanged="CheckedChanged_American"/>
+            <RadioButton x:Name="EuropeanOption" Content="European" CheckedChanged="CheckedChanged_European"/>
         </HorizontalStackLayout>
         <Label Text="Theme" HorizontalOptions="Center" FontSize="30" />
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="90" Margin="0,0,0,30">
@@ -21,6 +21,8 @@
             <RadioButton Content="Dark" />
         </HorizontalStackLayout>
 
-        <Button Text="Clear Session Data" Style="{StaticResource DarkButton}" WidthRequest="300"/>
+        <Button Text="Clear Session Data" Style="{StaticResource DarkButton}" WidthRequest="300" Margin="0,30"/>
+
+        <Button Text="Save Settings" Style="{StaticResource DarkButton}" WidthRequest="300" Margin="0,30" Clicked="SaveSettingsEvent"/>
     </StackLayout>
 </ContentPage>

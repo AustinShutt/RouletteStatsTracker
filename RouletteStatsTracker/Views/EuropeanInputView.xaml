@@ -4,12 +4,11 @@
              xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
              x:Class="RouletteStatsTracker.Views.EuropeanInputView">
     <ContentView.BindingContext>
-        <ViewModels:EuropeanInputViewModel/>
+        <ViewModels:AmericanInputViewModel/>
     </ContentView.BindingContext>
-    
-    <StackLayout>
-        <Label Text="European Input Page!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-    </StackLayout>
+
+    <HorizontalStackLayout Padding="3,0,3,3" Spacing="3">
+        <ImageButton Source="settings_icon.png" WidthRequest="60" HeightRequest="40" Padding="3,0,0,0" Margin="0,0,50,0" Clicked="SettingsButton_Clicked" />
+        <Button Text="0"  Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="0"  WidthRequest="100"/>
+    </HorizontalStackLayout>
 </ContentView>

@@ -2,30 +2,52 @@ namespace RouletteStatsTracker.Pages;
 
 using RouletteStatsTracker.Views;
 using RouletteStatsTracker.Models;
+using RouletteStatsTracker.Helpers;
+using RouletteStatsTracker.ViewModels;
+
 public partial class ValueInputPage : ContentPage
 {
 	AmericanInputView americanInputView;
 	EuropeanInputView europeanInputView;
+    AmericanInputViewModel vm;
+
+    Settings Settings { get; set; }
+    Settings.GameType GameType { get; set; }
 
 	public ValueInputPage(AmericanInputView americanInputView, EuropeanInputView europeanInputView)
     {
         InitializeComponent();
 
+        Settings = ServiceHelper.GetService<Settings>();
+
         this.americanInputView = americanInputView;
         this.europeanInputView = europeanInputView;
 
-        SetToAmerican();
+        this.BindingContext = vm = ServiceHelper.GetService<AmericanInputViewModel>();
+
+        SetGameType(Settings.gameType);
     }
 
-    public void SetToAmerican()
+    private void SetGameType(Settings.GameType type)
     {
         baseLayout.Clear();
-        baseLayout.Add(americanInputView);
+
+        if (type == Settings.GameType.AMERICAN)
+            baseLayout.Add(americanInputView);
+        else
+            baseLayout.Add(europeanInputView);
+
+        (baseLayout as IView).InvalidateArrange();
     }
 
-    public void SetToEuropean()
+    protected override void OnAppearing()
     {
-        baseLayout.Clear();
-        baseLayout.Add(europeanInputView);
+        base.OnAppearing();
+
+        if(GameType != Settings.gameType)
+        {
+            SetGameType(Settings.gameType);
+            GameType = Settings.gameType;
+        }
     }
 }

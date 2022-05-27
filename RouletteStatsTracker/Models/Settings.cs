@@ -14,10 +14,11 @@ namespace RouletteStatsTracker.Models
         public Theme theme { get; set; }
         public GameType gameType { get; set; }
 
-        Settings()
+        public Settings()
         {
             theme = Theme.LIGHT;
-            gameType = GameType.AMERICAN;
+            String value = Preferences.Get("GameType", "AMERICAN");
+            gameType = Enum.Parse<GameType>(value);
         }
     }
 }
