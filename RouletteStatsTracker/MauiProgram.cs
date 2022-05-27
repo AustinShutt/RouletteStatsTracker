@@ -44,6 +44,7 @@ public static class MauiProgram
 		//Add Page Singletons
         builder.Services.AddSingleton<ValueInputPage>();
         builder.Services.AddSingleton<FlowPage>();
+		builder.Services.AddSingleton<CTFlowPage>();
         builder.Services.AddSingleton<StatsPage>();
         builder.Services.AddSingleton<SettingsPage>();
 

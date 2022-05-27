@@ -12,7 +12,8 @@
             <ShellContent  ContentTemplate="{DataTemplate pages:ValueInputPage}"/>
         </Tab>
         <Tab Title="Flow" Icon="flow_icon.png">
-            <ShellContent  ContentTemplate="{DataTemplate pages:FlowPage}" />
+            <ShellContent  Title="R/B E/O H/L" ContentTemplate="{DataTemplate pages:FlowPage}" />
+            <ShellContent  Title="C/T" ContentTemplate="{DataTemplate pages:CTFlowPage}"/>
         </Tab>
         <Tab Title="Stats" Icon="stats_icon.png">
             <ShellContent  ContentTemplate="{DataTemplate pages:StatsPage}" />
