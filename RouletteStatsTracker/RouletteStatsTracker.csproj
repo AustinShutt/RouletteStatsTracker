@@ -32,7 +32,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#FFFFFF" />
+		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\chip_icon.svg" Color="#FFFFFF" />
 		<MauiImage Include="Resources\settings_icon.svg" />
 		<MauiImage Include="Resources\flow_icon.svg" />
 		<MauiImage Include="Resources\input_icon.svg" />
