@@ -48,7 +48,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
-                <Label Text="{Binding C1}"    TextColor="{StaticResource rDarkBlue}"      HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
+                <Label Text="{Binding C1}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding C2}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding C3}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
                 <Label Text="{Binding T1}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="4" FontSize="20"/>
@@ -64,9 +64,14 @@
     </ContentPage.Resources>
 
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="5, 0">
-        <Frame BackgroundColor="{StaticResource rGray}" WidthRequest="1000">
-            <Grid WidthRequest="350">
+    <Grid VerticalOptions="Fill" HorizontalOptions="Fill" Margin="5, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        
+        <Frame BackgroundColor="{StaticResource rGray}" Grid.Row="0">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -80,20 +85,20 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="#"     TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0" />
-                <Label Text="COL-1" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="1" />
-                <Label Text="COL-2" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="2" />
-                <Label Text="COL-3" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
+                <Label Text="C-1"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="1" />
+                <Label Text="C-2"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="2" />
+                <Label Text="C-3"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
                 <Label Text="T-1"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
                 <Label Text="T-2"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="5" />
-                <Label Text="T-3"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="End"    Grid.Row="0" Grid.Column="6" />
+                <Label Text="T-3"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center"    Grid.Row="0" Grid.Column="6" />
             </Grid>
         </Frame>
 
         <CollectionView x:Name="collectionView" 
                         ItemsSource="{Binding dataStore.CTObjects}" 
                         ItemTemplate="{StaticResource TemplateSelector}"  
-                        HeightRequest="500"
-                        WidthRequest="350"
+                        Grid.Row="1"
+                        Margin="5,0"
                         />
-    </StackLayout>
+    </Grid>
 </ContentPage>

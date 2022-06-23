@@ -39,8 +39,6 @@ public static class MauiProgram
         //Add View Singletons
         builder.Services.AddSingleton<AmericanInputView>();
 		builder.Services.AddSingleton<EuropeanInputView>();
-		builder.Services.AddSingleton<AmericanStatsView>();
-        builder.Services.AddSingleton<EuropeanStatsView>();
 		//Add Page Singletons
         builder.Services.AddSingleton<ValueInputPage>();
         builder.Services.AddSingleton<FlowPage>();
