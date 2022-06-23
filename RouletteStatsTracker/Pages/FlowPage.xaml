@@ -67,8 +67,13 @@
     </ContentPage.Resources>
     
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="5, 0">
-        <Frame BackgroundColor="{StaticResource rGray}" WidthRequest="1000">
+    <Grid VerticalOptions="Center" HorizontalOptions="Center" Margin="5, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Frame BackgroundColor="{StaticResource rGray}" Grid.Row="0" WidthRequest="1000">
             <Grid WidthRequest="350">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -83,7 +88,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="#"     TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0" />
-                <Label Text="RED"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="1" />
+                <Label Text="RED"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="1" />
                 <Label Text="BLACK" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="2" />
                 <Label Text="EVEN"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
                 <Label Text="ODD"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
@@ -97,6 +102,7 @@
                         ItemTemplate="{StaticResource TemplateSelector}"  
                         HeightRequest="500"
                         WidthRequest="350"
+                        Grid.Row="1"
                         />
-    </StackLayout>
+    </Grid>
 </ContentPage>

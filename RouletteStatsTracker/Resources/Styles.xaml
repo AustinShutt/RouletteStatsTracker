@@ -24,8 +24,8 @@
     </Style>
 
     <Style TargetType="Button" x:Key="BaseButton">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="25"/>
         <Setter Property="FontAttributes" Value="Bold"/>
@@ -37,8 +37,8 @@
                     <VisualState x:Name="Normal" />
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource LightGray}}" />
-                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkGray}, Dark={StaticResource DarkGray}}" />
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource LightGray}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -47,19 +47,19 @@
     </Style>
 
     <Style TargetType="Button" x:Key="RedButton" BasedOn="{StaticResource BaseButton}">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource rRed}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource rRed}, Dark={StaticResource rRed}}" />
     </Style>
 
 
     <Style TargetType="Button" x:Key="DarkButton" BasedOn="{StaticResource BaseButton}">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource rDarkBlue}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource rDarkBlue}, Dark={StaticResource rDarkBlue}}" />
     </Style>
 
     <Style TargetType="Button" x:Key="GreenButton" BasedOn="{StaticResource BaseButton}">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource rGreen}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource rGreen}, Dark={StaticResource rGreen}}" />
     </Style>
 
 
