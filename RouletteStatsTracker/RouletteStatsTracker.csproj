@@ -32,7 +32,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\chip_icon.svg" Color="#FFFFFF"  />
+		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\chip_icon.svg" Color="#FFFFFF" />
 		<MauiImage Include="Resources\settings_icon.svg" />
 		<MauiImage Include="Resources\flow_icon.svg" />
 		<MauiImage Include="Resources\input_icon.svg" />
@@ -83,13 +83,7 @@
 	  <MauiXaml Update="Views\AmericanInputView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\AmericanStatsView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\EuropeanInputView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\EuropeanStatsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

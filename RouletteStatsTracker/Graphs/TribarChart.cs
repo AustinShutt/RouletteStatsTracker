@@ -53,12 +53,9 @@ namespace RouletteStatsTracker.Graphs
 
         public void Draw(ICanvas canvas, RectF rect)
         {
-            float scale = Math.Min(rect.Width / 50f, rect.Height / 50f);
-            canvas.Scale(scale, scale);
-            
-            canvas.Translate(5, 20);
+            float totalWidth = rect.Width - 10;
+            float totalHeight = totalWidth / 10F;
 
-            float totalWidth = 400F;
             float ratioTotal = ratioLeft + ratioCenter + ratioRight;
 
 
@@ -67,20 +64,20 @@ namespace RouletteStatsTracker.Graphs
             float C = (ratioRight / ratioTotal) * totalWidth;
 
             canvas.FillColor = Color.FromArgb("2C3E50");
-            canvas.FillRectangle(0, 0, A, 40);
+            canvas.FillRectangle(0, 0, A, totalHeight);
 
             canvas.FillColor = Color.FromArgb("D92332");
-            canvas.FillRectangle(A, 0, B, 40);
+            canvas.FillRectangle(A, 0, B, totalHeight);
 
             canvas.FillColor = Color.FromArgb("2C3E50");
-            canvas.FillRectangle(A + B, 0, C, 40);
+            canvas.FillRectangle(A + B, 0, C, totalHeight);
            
            
             canvas.FontSize = 16;
             canvas.FontColor = Colors.White;
 
-            int heightText = 18;
-            int heightNum =  33;
+            int heightText = (int) (.4 * totalHeight);
+            int heightNum =  (int) (.8 * totalHeight);
 
 #if WINDOWS10_0_17763_0_OR_GREATER
             heightText = 12;
@@ -103,7 +100,6 @@ namespace RouletteStatsTracker.Graphs
                 canvas.DrawString((ratioRight * 100).ToString("0.0") + "%", A + B + (C / 2), heightNum, HorizontalAlignment.Center);
             }
             
-            canvas.Translate(-5, -20);
             canvas.ResetState();
         }
     }

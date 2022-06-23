@@ -4,6 +4,7 @@
              x:Class="RouletteStatsTracker.Pages.StatsPage"
              xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
              xmlns:drawable="clr-namespace:RouletteStatsTracker.Graphs"
+             BackgroundColor="{StaticResource rWhite}"
              Title="">
 
     <ContentPage.BindingContext>
@@ -11,19 +12,19 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <drawable:DonutChart x:Key="RedBlackChart" x:Name="redBlackDonut" x:DataType="graph:MauiDrawable">
+        <drawable:DonutChart x:Key="RedBlackChart" x:Name="redBlackDonut">
             <x:Arguments>
                 <x:String>Red</x:String>
                 <x:String>Black</x:String>
             </x:Arguments>
         </drawable:DonutChart>
-        <drawable:DonutChart x:Key="EvenOddChart" x:Name="evenOddDonut" x:DataType="graph:MauiDrawable">
+        <drawable:DonutChart x:Key="EvenOddChart" x:Name="evenOddDonut" >
             <x:Arguments>
                 <x:String>Even</x:String>
                 <x:String>Odd</x:String>
             </x:Arguments>
         </drawable:DonutChart>
-        <drawable:DonutChart x:Key="HighLowChart" x:Name="highLowDonut" x:DataType="graph:MauiDrawable">
+        <drawable:DonutChart x:Key="HighLowChart" x:Name="highLowDonut">
             <x:Arguments>
                 <x:String>High</x:String>
                 <x:String>Low</x:String>
@@ -49,24 +50,30 @@
             <x:Arguments>
             </x:Arguments>
         </drawable:RadarGraph>
-        <drawable:RadarGraph x:Key="ERadarChart" x:Name="EradarGraph">
-            <x:Arguments>
-            </x:Arguments>
-        </drawable:RadarGraph>
-
     </ContentPage.Resources>
 
-    <StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <GraphicsView x:Name="RedBlackSurface" Drawable="{StaticResource RedBlackChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
-            <GraphicsView x:Name="EvenOddSurface"  Drawable="{StaticResource EvenOddChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
-            <GraphicsView x:Name="HighLowSurface"  Drawable="{StaticResource HighLowChart}" HeightRequest="120" WidthRequest="120" HorizontalOptions="Center" />
-        </StackLayout>
+    <Grid HorizontalOptions="Fill" VerticalOptions="Fill" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+       
+        <GraphicsView x:Name="RedBlackSurface" Drawable="{StaticResource RedBlackChart}" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
+        <GraphicsView x:Name="EvenOddSurface"  Drawable="{StaticResource EvenOddChart}" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="1"/>
+        <GraphicsView x:Name="HighLowSurface"  Drawable="{StaticResource HighLowChart}" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="2" />
 
-        <GraphicsView x:Name="ColumnSurface" Drawable="{StaticResource ColumnChart}" HeightRequest="48"  WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <GraphicsView x:Name="ThirdsSurface" Drawable="{StaticResource ThirdsChart}" HeightRequest="48"  WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <StackLayout x:Name="radarView"/>
 
-        <!--<GraphicsView x:Name="RadarSurface"  Drawable="{DynamicResource RadarChart}"  HeightRequest="350" WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,25"/>-->
-    </StackLayout>
+        <GraphicsView x:Name="ColumnSurface" Drawable="{StaticResource ColumnChart}"
+                      Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <GraphicsView x:Name="ThirdsSurface" Drawable="{StaticResource ThirdsChart}"
+                      Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+        <GraphicsView x:Name="RadarSurface"  Drawable="{DynamicResource RadarChart}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" />
+    </Grid>
 </ContentPage>

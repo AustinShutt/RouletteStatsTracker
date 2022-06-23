@@ -33,8 +33,8 @@ namespace RouletteStatsTracker.ViewModels
             {
                 NumberList.Insert(0, arg);
 
-                int cutoff = 13;    //Define different values for different platforms
-                
+                int cutoff = (int) DeviceDisplay.MainDisplayInfo.Height / 100 - 6;    //Define different values for different platforms
+
                 if(NumberList.Count > cutoff)
                 {
                     OverFlow.Push(NumberList[NumberList.Count - 1]);

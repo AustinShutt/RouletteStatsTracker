@@ -27,7 +27,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12" VerticalOptions="Center"/>
+                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12" VerticalOptions="Center"/>
                 <Label Text="{Binding Red}"   TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding Black}" TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding Even}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
@@ -50,7 +50,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
+                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
                 <Label Text="{Binding Red}"   TextColor="{StaticResource rRed}"      HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding Black}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding Even}"  TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
@@ -67,9 +67,14 @@
     </ContentPage.Resources>
     
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="5, 0">
-        <Frame BackgroundColor="{StaticResource rGray}" WidthRequest="1000">
-            <Grid WidthRequest="350">
+    <Grid VerticalOptions="Fill" HorizontalOptions="Fill" Margin="5, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        
+        <Frame BackgroundColor="{StaticResource rGray}" Grid.Row="0">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -82,21 +87,21 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="#"     TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0" />
-                <Label Text="RED"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="1" />
-                <Label Text="BLACK" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="2" />
-                <Label Text="EVEN"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
-                <Label Text="ODD"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
-                <Label Text="LOW"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="5" />
-                <Label Text="HIGH"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" HorizontalOptions="End"    Grid.Row="0" Grid.Column="6" />
+                <Label Text="#"     TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="RED"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="1" />
+                <Label Text="BLACK" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="2" />
+                <Label Text="EVEN"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
+                <Label Text="ODD"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
+                <Label Text="LOW"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="5" />
+                <Label Text="HIGH"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"    Grid.Row="0" Grid.Column="6" />
             </Grid>
         </Frame>
         
         <CollectionView x:Name="collectionView" 
                         ItemsSource="{Binding dataStore.FlowObjects}" 
-                        ItemTemplate="{StaticResource TemplateSelector}"  
-                        HeightRequest="500"
-                        WidthRequest="350"
+                        ItemTemplate="{StaticResource TemplateSelector}"
+                        Grid.Row="1"
+                        Margin="5,0"
                         />
-    </StackLayout>
+    </Grid>
 </ContentPage>

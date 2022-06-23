@@ -136,17 +136,17 @@ namespace RouletteStatsTracker.Helpers
             if (value % 3 == 1)
             {
                 DataStore.Column1++;
-                ctObject.C1 = str;
+                ctObject.C1 = "C1";
             }
             else if (value % 3 == 2)
             {
                 DataStore.Column2++;
-                ctObject.C2 = str;
+                ctObject.C2 = "C2";
             }
             else
             {
                 DataStore.Column3++;
-                ctObject.C3 = str;
+                ctObject.C3 = "C3";
             }
 
 
@@ -158,18 +158,18 @@ namespace RouletteStatsTracker.Helpers
             if (value <= 12)
             {
                 DataStore.Third1++;
-                ctObject.T1 = str;
+                ctObject.T1 = "T1";
             }
 
             else if (value <= 24)
             { 
                 DataStore.Third2++;
-                ctObject.T2 = str;
+                ctObject.T2 = "T2";
             }
             else
             {
                 DataStore.Third3++;
-                ctObject.T3 = str;  
+                ctObject.T3 = "T3";  
             }
 
             //Add Totals and flowObject and return
