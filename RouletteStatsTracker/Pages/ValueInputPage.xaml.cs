@@ -49,5 +49,11 @@ public partial class ValueInputPage : ContentPage
             SetGameType(Settings.gameType);
             GameType = Settings.gameType;
         }
+
+        Task.Run(async delegate         //Todo: Very hacked solution, allows the entire page to load before setting the height of the element
+        {
+            await Task.Delay(1000);
+            vm.SetMaxElements(sideBar.Height);
+        });
     }
 }

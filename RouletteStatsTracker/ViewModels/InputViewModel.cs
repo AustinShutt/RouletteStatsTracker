@@ -19,7 +19,9 @@ namespace RouletteStatsTracker.ViewModels
         public ICommand DeleteButtonCommand { get; set; }
         
         private UtilityDataService dataService;    //Acts on the data set using methods for the American wheel, Add, Delete etc..
-        
+
+        int cutoff = 17;
+
         public InputViewModel()
         {
             dataService = ServiceHelper.GetService<UtilityDataService>();
@@ -33,9 +35,7 @@ namespace RouletteStatsTracker.ViewModels
             {
                 NumberList.Insert(0, arg);
 
-                int cutoff = (int) DeviceDisplay.MainDisplayInfo.Height / 100 - 6;    //Define different values for different platforms
-
-                if(NumberList.Count > cutoff)
+                while(NumberList.Count > cutoff)
                 {
                     OverFlow.Push(NumberList[NumberList.Count - 1]);
                     NumberList.RemoveAt(NumberList.Count - 1);
@@ -58,6 +58,13 @@ namespace RouletteStatsTracker.ViewModels
 
                 NumberList.RemoveAt(0);
             });
+        }
+
+        public void SetMaxElements(double elementHeight) {
+
+            if (elementHeight < 0) return;
+
+            cutoff = (int)(elementHeight / 32F);
         }
     }
 }

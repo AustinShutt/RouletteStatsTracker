@@ -11,7 +11,7 @@
         <ViewModels:InputViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Resources>
+        <ContentPage.Resources>
         <DataTemplate x:Key="RedRowTemplate">
             <Label Text="{Binding}" TextColor="{StaticResource rRed}" HorizontalOptions="Center" FontSize="24"/>
         </DataTemplate>
@@ -29,7 +29,7 @@
     </ContentPage.Resources>
 
 
-    <Grid VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="{StaticResource rWhite}" Margin="5,5">
+    <Grid VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="{StaticResource rWhite}" Margin="5,5" x:Name="baseGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="10*"/>
@@ -54,7 +54,10 @@
             </Grid.ColumnDefinitions>
             
             <Frame BackgroundColor="{StaticResource rGray}" CornerRadius="6" WidthRequest="60" Grid.Row="0">
-                <CollectionView ItemsSource="{Binding NumberList}" ItemTemplate="{StaticResource TemplateSelector}" HorizontalOptions="Center"  WidthRequest="60" ItemsUpdatingScrollMode="KeepItemsInView"/>
+                <CollectionView x:Name="sideBar" ItemsSource="{Binding NumberList}" ItemTemplate="{StaticResource TemplateSelector}" 
+                                HorizontalOptions="Center"  WidthRequest="60" ItemsUpdatingScrollMode="KeepItemsInView"
+                                
+                                />
             </Frame>
 
             <ImageButton Source="delete_icon.png" Command="{Binding DeleteButtonCommand}"  Padding="0,5,0,5" HeightRequest="60" WidthRequest="50" Grid.Row="1"/>
