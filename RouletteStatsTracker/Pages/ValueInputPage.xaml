@@ -39,8 +39,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        
-        <StackLayout x:Name="baseLayout" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+
+        <ImageButton Source="settings_icon.png" WidthRequest="60" HeightRequest="40" Clicked="SettingsButton_Clicked" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        <StackLayout x:Name="baseLayout" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
             <!-- This stacklayout is filled in programatically depending on american or european input-->
             </StackLayout>
         <Grid Margin="5,0" Grid.Row="1" Grid.Column="0">

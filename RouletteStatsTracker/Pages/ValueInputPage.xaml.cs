@@ -40,6 +40,11 @@ public partial class ValueInputPage : ContentPage
         (baseLayout as IView).InvalidateArrange();
     }
 
+    private async void SettingsButton_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(SettingsPage));
+    }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();

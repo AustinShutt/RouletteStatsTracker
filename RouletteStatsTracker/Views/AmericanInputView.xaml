@@ -8,9 +8,17 @@
         <ViewModels:InputViewModel/>
     </ContentView.BindingContext>
 
-    <HorizontalStackLayout Padding="3,0,3,3" Spacing="3">
-        <ImageButton Source="settings_icon.png" WidthRequest="60" HeightRequest="40" Padding="3,0,0,0" Margin="0,0,50,0" Clicked="SettingsButton_Clicked" />
-        <Button Text="0"  Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="0"  WidthRequest="100"/>
-        <Button Text="00" Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="00" WidthRequest="100"/>
-    </HorizontalStackLayout>
+    <Grid HorizontalOptions="Fill" VerticalOptions="Fill" ColumnSpacing="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Button Text="0"  Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="0"  Grid.Column="0"/>
+        <Button Text="00" Style="{StaticResource GreenButton}" Command="{Binding DataButtonCommand}" CommandParameter="00" Grid.Column="1"/>
+    </Grid>
 </ContentView>
