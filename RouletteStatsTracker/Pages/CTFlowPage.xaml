@@ -4,6 +4,7 @@
              x:Class="RouletteStatsTracker.Pages.CTFlowPage"
              xmlns:ViewModels="clr-namespace:RouletteStatsTracker.ViewModels"
              xmlns:controls="clr-namespace:RouletteStatsTracker.Controls"
+             BackgroundColor="{StaticResource rWhite}"
              Title="">
     
     <ContentPage.BindingContext>
@@ -24,13 +25,13 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12" VerticalOptions="Center"/>
+                <Label Text="{Binding Num}" TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12" VerticalOptions="Center"/>
                 <Label Text="{Binding C1}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding C2}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding C3}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>
                 <Label Text="{Binding T1}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="4" FontSize="20"/>
                 <Label Text="{Binding T2}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="5" FontSize="20"/>
-                                    <Label  Text="{Binding T3}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
+                <Label  Text="{Binding T3}"  TextColor="{StaticResource rGreen}" HorizontalOptions="Center" Grid.Column="6" FontSize="20"/>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="NormalTemplate">
@@ -47,7 +48,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Start" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
+                <Label Text="{Binding Num}"   TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="0" FontSize="12"  VerticalOptions="Center"/>
                 <Label Text="{Binding C1}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="1" FontSize="20"/>
                 <Label Text="{Binding C2}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="2" FontSize="20"/>
                 <Label Text="{Binding C3}"    TextColor="{StaticResource rDarkBlue}" HorizontalOptions="Center" Grid.Column="3" FontSize="20"/>

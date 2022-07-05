@@ -88,12 +88,12 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="#"     TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0" />
-                <Label Text="RED"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="1" />
+                <Label Text="RED"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="1" />
                 <Label Text="BLACK" TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="2" />
                 <Label Text="EVEN"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" />
                 <Label Text="ODD"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" />
                 <Label Text="LOW"   TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="5" />
-                <Label Text="HIGH"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"    Grid.Row="0" Grid.Column="6" />
+                <Label Text="HIGH"  TextColor="{StaticResource rDarkBlue}" FontSize="17" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"    Grid.Row="0" Grid.Column="6" />
             </Grid>
         </Frame>
         
