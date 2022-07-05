@@ -2,6 +2,8 @@ namespace RouletteStatsTracker.Pages;
 
 using RouletteStatsTracker.Models;
 using RouletteStatsTracker.Helpers;
+using RouletteStatsTracker.ViewModels;
+
 public partial class SettingsPage : ContentPage
 {
 	Settings Settings { get; set; }
@@ -39,5 +41,10 @@ public partial class SettingsPage : ContentPage
             AmericanOption.IsChecked = true;
         else
             EuropeanOption.IsChecked = true;
+    }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        ServiceHelper.GetService<InputViewModel>().ClearData();
     }
 }

@@ -66,5 +66,12 @@ namespace RouletteStatsTracker.ViewModels
 
             cutoff = (int)(elementHeight / 32F);
         }
+
+        public void ClearData()
+        {
+            dataService.ClearAll();
+            NumberList.Clear();
+            OverFlow.Clear();
+        }
     }
 }

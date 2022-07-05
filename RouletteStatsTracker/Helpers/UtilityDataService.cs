@@ -251,5 +251,29 @@ namespace RouletteStatsTracker.Helpers
             //Add Totals and flowObject and return
             DataStore.Total--;
         }
+
+        public void ClearAll()
+        {
+            DataStore.Red = 0;
+            DataStore.Black = 0;
+            DataStore.Even = 0;
+            DataStore.Odd = 0;
+            DataStore.High = 0;
+            DataStore.Low = 0;
+            DataStore.Column1 = 0;
+            DataStore.Column2 = 0;
+            DataStore.Column3 = 0;
+            DataStore.Third1 = 0;
+            DataStore.Third2 = 0;
+            DataStore.Third3 = 0;
+            DataStore.Total = 0;
+            DataStore.FlowObjects.Clear();
+            DataStore.CTObjects.Clear();
+
+            for(int i = 0; i < DataStore.NumberArray.Length; i++)
+            {
+                DataStore.NumberArray[i] = 0;
+            }
+        }
     }
 }
